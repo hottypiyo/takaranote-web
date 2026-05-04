@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>たからノート — 収支・プレゼント管理アプリ</title>
+  <meta name="description" content="現金収入の記録・確定申告の集計・贈与税チェックができる収支管理アプリ。手入力で簡単に記録できます。" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #C9A84C;
+      --bg: #1A1A1F;
+      --card: #25252D;
+      --text: #ECECEE;
+      --muted: #8E8E9A;
+      --border: rgba(255,255,255,0.08);
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
+      line-height: 1.7;
+    }
+
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Hero ── */
+    .hero {
+      text-align: center;
+      padding: 72px 24px 56px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .icon {
+      width: 96px;
+      height: 96px;
+      border-radius: 22px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      margin: 0 auto 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+    }
+    h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 12px;
+      color: var(--gold);
+    }
+    .tagline {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-bottom: 32px;
+    }
+    .badges {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .badge {
+      display: inline-block;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 20px;
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+
+    /* ── Features ── */
+    .features {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 24px 64px;
+      display: grid;
+      gap: 16px;
+    }
+    .feature {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 24px;
+    }
+    .feature h3 {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .feature p {
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+
+    /* ── Privacy Policy ── */
+    .privacy {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin-bottom: 48px;
+    }
+    .privacy h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--gold);
+    }
+    .privacy .updated {
+      font-size: 0.8125rem;
+      color: var(--muted);
+      margin-bottom: 32px;
+    }
+    .privacy h3 {
+      font-size: 0.9375rem;
+      font-weight: 600;
+      margin: 24px 0 6px;
+    }
+    .privacy p {
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+    .disclaimer {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px;
+      margin-top: 32px;
+      font-size: 0.8125rem;
+      color: var(--muted);
+    }
+
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.8125rem;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="icon">💰</div>
+    <h1>たからノート</h1>
+    <p class="tagline">収支・プレゼントの記録から確定申告の集計まで。<br>手入力でかんたんに管理できます。</p>
+    <div class="badges">
+      <span class="badge">iOS / Android</span>
+      <span class="badge">無料で始める</span>
+      <span class="badge">銀行連携なし</span>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features">
+    <div class="feature">
+      <h3>収支を3秒で記録</h3>
+      <p>金額を入力してカテゴリを選ぶだけ。深夜帰りでも疲れていてもすぐ記録できます。</p>
+    </div>
+    <div class="feature">
+      <h3>103万円の壁を自動チェック</h3>
+      <p>年間収入の合計をゲージで確認。「気づいたら超えてた」を防ぎます。</p>
+    </div>
+    <div class="feature">
+      <h3>プレゼントの贈与税を管理</h3>
+      <p>もらったバッグ・時計・現金をヴォルトに記録。年間110万円の基準をいつでも確認できます。</p>
+    </div>
+    <div class="feature">
+      <h3>CSV出力で確定申告の準備</h3>
+      <p>収支記録を一括エクスポート。税理士への相談資料としても使えます。</p>
+    </div>
+    <div class="feature">
+      <h3>プライバシーモード搭載</h3>
+      <p>タップひとつで金額を非表示。周囲の目が気になる場面でも安心して使えます。</p>
+    </div>
+  </section>
+
+  <!-- Privacy Policy -->
+  <section class="privacy">
+    <hr class="divider" />
+    <h2>プライバシーポリシー</h2>
+    <p class="updated">最終更新：2026年5月</p>
+
+    <h3>1. 事業者情報</h3>
+    <p>本アプリ「たからノート」は、個人開発者 Kosuke Hotta によって提供されます。</p>
+
+    <h3>2. 収集する情報</h3>
+    <p>本アプリが収集する情報は以下のとおりです。<br>
+    • メールアドレス（アカウント登録時）<br>
+    • 収支・プレゼントの記録データ（お客様が入力した情報）<br>
+    • アプリの利用状況（クラッシュレポート等）<br><br>
+    銀行口座情報・クレジットカード情報・マイナンバー等の機微な個人情報は収集しません。</p>
+
+    <h3>3. 利用目的</h3>
+    <p>収集した情報は以下の目的で使用します。<br>
+    • アプリの機能提供（収支管理・クラウド同期）<br>
+    • お客様のサポート対応<br>
+    • サービスの改善・不具合対応</p>
+
+    <h3>4. 第三者提供</h3>
+    <p>お客様の個人情報を法令に基づく場合を除き、第三者に提供・開示しません。</p>
+
+    <h3>5. 外部サービス</h3>
+    <p>本アプリは以下の外部サービスを利用しています。<br>
+    • Supabase（認証・データ保存）— データセンター所在地：東京（ap-northeast-1）<br>
+    &nbsp;&nbsp;プライバシーポリシー：<a href="https://supabase.com/privacy">supabase.com/privacy</a></p>
+
+    <h3>6. データの保管・削除</h3>
+    <p>お客様のデータはSupabaseの東京リージョンのサーバーに暗号化して保管されます。越境移転はありません。<br><br>
+    設定画面の「データとアカウントを削除」からすべてのデータを完全に削除できます。</p>
+
+    <h3>7. セキュリティ</h3>
+    <p>認証トークン等の機密データはiOS Keychain / Android Keystoreに保存し、平文でのディスク保存は行いません。</p>
+
+    <h3>8. お子様の利用</h3>
+    <p>本アプリは16歳未満のお客様を対象としていません。16歳未満の方の個人情報を意図的に収集することはありません。</p>
+
+    <h3>9. 改定</h3>
+    <p>本ポリシーは予告なく改定されることがあります。重要な変更がある場合はアプリ内でお知らせします。</p>
+
+    <h3>10. お問い合わせ</h3>
+    <p>プライバシーに関するお問い合わせは、下記メールアドレスよりご連絡ください。<br>
+    <a href="mailto:kosuke.hotta717@gmail.com">kosuke.hotta717@gmail.com</a></p>
+
+    <div class="disclaimer">
+      本アプリが表示する税務関連の情報（103万円の壁・贈与税など）はあくまで参考値です。正確な判断が必要な場合は税理士または税務署にご相談ください。
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2026 Kosuke Hotta — たからノート
+  </footer>
+
+</body>
+</html>
