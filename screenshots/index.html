@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>たからノート スクリーンショット ダウンロード</title>
+<style>
+  :root { color-scheme: dark; }
+  body { margin:0; background:#121216; color:#ECECEE;
+    font-family:-apple-system,"Hiragino Sans","Hiragino Kaku Gothic ProN",sans-serif;
+    padding:24px; line-height:1.6; }
+  h1 { font-size:20px; color:#E2D27A; margin:0 0 4px; }
+  p.sub { color:#9696A5; font-size:13px; margin:0 0 20px; }
+  .all { display:inline-block; background:#E2D27A; color:#1A1A1F; font-weight:700;
+    text-decoration:none; padding:12px 20px; border-radius:12px; margin-bottom:28px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:18px; }
+  .card { background:#1C1C22; border-radius:14px; padding:10px; text-align:center; }
+  .card img { width:100%; border-radius:8px; display:block; }
+  .card a { color:#E2D27A; text-decoration:none; font-size:13px; display:block; margin-top:8px; }
+  .name { color:#9696A5; font-size:12px; margin-top:6px; }
+</style>
+</head>
+<body>
+  <h1>たからノート スクリーンショット</h1>
+  <p class="sub">App Store 6.9インチ規格（1320×2868）／全8枚。タップで原寸表示、長押し or リンクで保存。</p>
+  <a class="all" href="takara-screenshots.zip" download>すべてZIPでダウンロード</a>
+  <div class="grid" id="grid"></div>
+<script>
+  const files = [
+    ["01-home.png","ホーム"],
+    ["05-record-form.png","記録フォーム"],
+    ["02-income.png","収入・シフト"],
+    ["03-vault.png","ヴォルト"],
+    ["06-settings.png","設定"],
+    ["07-spending.png","支出"],
+    ["08-privacy-on.png","プライバシー"],
+    ["04-add-menu.png","追加メニュー"],
+  ];
+  document.getElementById("grid").innerHTML = files.map(([f,label]) =>
+    `<div class="card">
+      <a href="${f}" target="_blank"><img src="${f}" alt="${label}"></a>
+      <a href="${f}" download>保存</a>
+      <div class="name">${label}</div>
+    </div>`).join("");
+</script>
+</body>
+</html>
